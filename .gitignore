@@ -1,0 +1,20 @@
+.DS_Store
+# vim
+.*.sw[a-z]
+*.un~
+Session.vim
+# OSX Specific
+Icon?
+# Textmate
+*.tmproj
+*.tmproject
+tmtags
+# Thumbnails
+._*
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+# Windows image file caches
+Thumbs.db 
+# Folder config file
+Desktop.ini

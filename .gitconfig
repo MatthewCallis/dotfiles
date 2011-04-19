@@ -1,0 +1,26 @@
+[user]
+	name = Matthew Callis
+	email = matthew.callis@gmail.com
+[push]
+	default = matching
+[pull]
+	default = matching
+[core]
+	excludesfile = /Users/matthewcallis/.gitignore
+	editor = mate -w
+	hideDotFiles = false
+[color]
+	ui = auto
+[alias]
+	co = checkout
+	ci = commit
+	rb = rebase
+	br = branch
+	st = status
+	treezy = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "develop"]
+	remote = origin
+	merge = refs/heads/develop
