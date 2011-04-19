@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Symbol List: Functions</string>
+	<key>scope</key>
+	<string>source.snes.function</string>
+	<key>settings</key>
+	<dict>
+		<key>showInSymbolList</key>
+		<integer>1</integer>
+		<key>symbolTransformation</key>
+		<string>
+		s/\s*:?$//g;	# strip terminating ws + colon
+	</string>
+	</dict>
+	<key>uuid</key>
+	<string>897ACB00-BCED-4AE6-80C1-5AFA25C989D3</string>
+</dict>
+</plist>

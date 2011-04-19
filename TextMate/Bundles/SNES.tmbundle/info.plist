@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>deleted</key>
+	<array>
+		<string>4630FE7E-BE57-494A-8577-F2AC870873CB</string>
+		<string>E2ED7814-6FDD-4DA1-B6DA-1455F1F7BDF2</string>
+	</array>
+	<key>name</key>
+	<string>SNES</string>
+	<key>ordering</key>
+	<array>
+		<string>63401F1B-1A64-4CEA-8856-E38BE8F89FF7</string>
+		<string>897ACB00-BCED-4AE6-80C1-5AFA25C989D3</string>
+		<string>D70C75B8-41C7-4CAC-B3DE-F978EBB06F5E</string>
+	</array>
+	<key>uuid</key>
+	<string>7AB59135-3222-4B1A-9A6B-3BF0818B6FB1</string>
+</dict>
+</plist>

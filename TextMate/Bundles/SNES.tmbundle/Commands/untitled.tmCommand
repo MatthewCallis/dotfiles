@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string># just to remind you of some useful environment variables
+# see Help / Environment Variables for the full list
+echo File: "$TM_FILENAME"
+# echo Word: "$TM_CURRENT_WORD"
+# echo Selection: "$TM_SELECTED_TEXT"
+#cd "/Users/gapetto/_me/snesasm/SNESASM/build/Release/"
+#./SNESASM $TM_FILENAME test.sfc
+
+echo [objects] &gt; temp.prj
+echo $TM_FILENAME.obj &gt;&gt; temp.prj
+
+wla-65816 -o $TM_FILENAME $TM_FILENAME.obj
+wlalink -vr temp.prj $TM_FILENAME.sfc
+
+rm $TM_FILENAME.obj
+rm temp.prj</string>
+	<key>input</key>
+	<string>document</string>
+	<key>name</key>
+	<string>untitled</string>
+	<key>output</key>
+	<string>openAsNewDocument</string>
+	<key>scope</key>
+	<string>source.snes</string>
+	<key>uuid</key>
+	<string>1C810038-8E7E-4742-A13E-37636759C52D</string>
+</dict>
+</plist>
