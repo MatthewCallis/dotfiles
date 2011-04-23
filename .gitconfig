@@ -1,6 +1,8 @@
 [user]
 	name = Matthew Callis
 	email = matthew.callis@gmail.com
+[github]
+	user = MatthewCallis
 [push]
 	default = matching
 [pull]
@@ -10,25 +12,56 @@
 	editor = mate -w
 	hideDotFiles = false
 [color]
-	ui     = auto
-	branch = auto
-	diff   = auto
-	grep   = auto
-	status = auto
-	log    = auto
+	branch      = auto
+	diff        = auto
+	grep        = auto
+	interactive = auto
+	log         = auto
+	status      = auto
+	ui          = auto
+	pager       = true
+[color "branch"]
+	current = yellow reverse
+	local   = yellow
+	remote  = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old  = red bold
+	new  = green bold
 [color "status"]
 	added     = green
+	changed   = cyan
 	untracked = yellow
 [alias]
-	co     = checkout
-	ci     = commit
-	rb     = rebase
-	br     = branch
-	st     = status
-	df     = diff
-	who    = shortlog -nes
-	treezy = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
-	squash = rebase -i HEAD~
+	aliases            = config --global --get-regexp alias.*
+	bs                 = bisect
+	br                 = branch
+	ci                 = commit -am
+	msg                = commit --allow-empty -m
+	co                 = checkout
+	cp                 = cherry-pick
+	df                 = diff
+	diffindex          = diff-index -p -M -b -w --color HEAD
+	lg                 = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	slog               = log --pretty=format:'%h - %an, %ar : %s'
+	treezy             = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
+	gl                 = log --decorate --stat --graph --pretty=format:'%C(yellow)%h%Creset (%ar - %Cred%an%Creset), %s%n' 
+	who                = shortlog -nes
+	ph                 = push origin master
+	pl                 = pull origin master
+	rb                 = rebase
+	squash             = rebase -i HEAD~
+	undo               = reset --hard
+	unstage            = reset HEAD
+	st                 = status
+	publish            = !sh -c 'CUR=`git branch | grep \\*` && git checkout ${1:-"master"} && git merge ${CUR:2} && git push && git checkout ${CUR:2}' -
+	sync               = !sh -c 'CUR=`git branch | grep \\*` && git checkout ${1:-"master"} && git cherry HEAD ${CUR:2} | cut -sd + -f 2 | xargs -L1 -r git cherry-pick && git push && git checkout ${CUR:2}' -
+	update             = !sh -c 'git pull --rebase origin ${1:-"master"}' -
+	whois              = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
+	whats-in-the-stash = stash show -p
+[apply]
+	whitespace = strip
 [branch "master"]
 	remote = origin
 	merge = refs/heads/master
