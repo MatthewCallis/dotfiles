@@ -10,13 +10,23 @@
 	editor = mate -w
 	hideDotFiles = false
 [color]
-	ui = auto
+	ui     = auto
+	branch = auto
+	diff   = auto
+	grep   = auto
+	status = auto
+	log    = auto
+[color "status"]
+	added     = green
+	untracked = yellow
 [alias]
-	co = checkout
-	ci = commit
-	rb = rebase
-	br = branch
-	st = status
+	co     = checkout
+	ci     = commit
+	rb     = rebase
+	br     = branch
+	st     = status
+	df     = diff
+	who    = shortlog -nes
 	treezy = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
 	squash = rebase -i HEAD~
 [branch "master"]
