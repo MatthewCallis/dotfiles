@@ -1,7 +1,7 @@
 # TextMate as default editor, w is to wait for TextMate window to close
 export TERM='xterm-256color'
 export EDITOR="/usr/local/bin/mate -w"
-export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+#export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=1
 
 export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
@@ -144,17 +144,16 @@ ximgopt(){
 alias ll='ls -hl'
 alias la='ls -a'
 alias lla='ls -lah'
-alias mysql=/usr/local/mysql/bin/mysql
-alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 alias cpu='top -o cpu'
 alias show='cat ~/.dirs'
 alias ..='cd ..'
 alias ...='cd .. ; cd ..'
-alias g='grep -i'  #case insensitive grep
+alias g='grep -i' #case insensitive grep
 alias f='find . -iname'
-alias ducks='du -cks * | sort -rn|head -11' # Lists the size of all the folders and files
 alias top='top -o cpu'
 alias systail='tail -f /var/log/system.log'
+alias ducks='du -cks * | sort -rn|head -11' # Lists the size of all the folders and files
+alias drives='df -h' #'diskutil list' # List all mounted drives and their partitions
 
 # git autocomplete
 alias gco='git co'
